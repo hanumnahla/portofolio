@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Utama</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+        
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-danger" href="index.html">hanumnz</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="hero" id="home">
+        <img src="foto profil.jpg" alt="Foto Profil" class="profile-img">
+        <h1 class="display-4 fw-bold">Hanum Nahla Zahrani</h1>
+        <p class="lead">Mahasiswa Informatika Universitas PGRI Semarang</p>
+    </section>
+
+    <div class="container">
+        <div class="greeting-container" id="greeting"></div>
+        <h2 class="fw-bold">Selamat Datang di Portofolio Saya</h2>
+        <p class="mt-3">
+            Halo! Saya Hanum Nahla Zahrani, mahasiswa Informatika di Universitas PGRI Semarang. 
+            Di sini, saya berbagi tentang karya, pengalaman, dan aspirasi saya di dunia teknologi.
+        </p>
+    </div>
+
+    
+    <footer>
+        <p>&copy; 2025 Portofolio. Semua hak dilindungi.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        
+        const greetingElement = document.getElementById('greeting');
+        const currentHour = new Date().getHours();
+        let greetingMessage;
+
+        if (currentHour < 12) {
+            greetingMessage = 'Selamat Pagi!';
+        } else if (currentHour < 18) {
+            greetingMessage = 'Selamat Siang!';
+        } else {
+            greetingMessage = 'Selamat Malam!';
+        }
+
+        greetingElement.textContent = `${greetingMessage} Semoga harimu menyenangkan!`;
+    </script>
+</body>
+</html>
